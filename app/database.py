@@ -3,7 +3,7 @@ import os
 
 from sqlmodel import Session, SQLModel, create_engine
 
-engine = create_engine("postgresql://postgres:aa123@localhost:5432/fastapi")
+engine = create_engine("postgresql://postgres:aa123@localhost:5432/learn_fastapi")
 
 
 def get_db():

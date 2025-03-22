@@ -19,7 +19,7 @@ async def get_users(db: Session = Depends(get_db)):
 @user_router.post("/users/create")
 async def create_user(user: CreateUsers, db: Session = Depends(get_db)):
 
-    user_db = Users(**user.dict())
+    user_db = Users(**user.dict())  # unpacking the user object
     db.add(user_db)
     db.commit()
     db.refresh(user_db)
